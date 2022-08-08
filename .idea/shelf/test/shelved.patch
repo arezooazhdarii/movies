@@ -1,0 +1,271 @@
+Index: src/main/resources/db/changelog/20220224_load_sample_data.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/db/changelog/20220224_load_sample_data.xml b/src/main/resources/db/changelog/20220224_load_sample_data.xml
+new file mode 100644
+--- /dev/null	(date 1659790172422)
++++ b/src/main/resources/db/changelog/20220224_load_sample_data.xml	(date 1659790172422)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<databaseChangeLog
++        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
++        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
++                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
++        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
++    <changeSet id="1645701740000-1" author="arezoo (generated)">
++        <loadData file="db/data/academy_awards.csv" tableName="academy_awards">
++            <column header="year" type="STRING" name="id"/>
++            <column header="category" type="STRING" name="name"/>
++            <column header="nominee" type="STRING" name="current_price"/>
++            <column header="additional_info" type="STRING" name="last_update"/>
++            <column header="won" type="STRING" name="last_update"/>
++        </loadData>
++    </changeSet>
++
++</databaseChangeLog>
+\ No newline at end of file
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server.port=8080\r\n\r\n\r\n#spring.datasource.url=jdbc:mysql://localhost:3306/restapi?user=root&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&useUnicode=yes&characterEncoding=UTF-8\r\nspring.datasource.url=jdbc:mysql://localhost:3306/khar?useUnicode=yes&characterEncoding=UTF-8\r\nspring.datasource.username=root\r\nspring.datasource.password=neovision\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect\r\nspring.jpa.properties.hibernate.format_sql=true\r\n\r\n#baseUrl-callOmdb\r\nomdb.base.url=http://www.omdbapi.com/\r\nomdb.apikey=a041ecd3\r\nomdb.id=tt3896198\r\n\r\nspring.servlet.multipart.max-file-size=20MB\r\nspring.servlet.multipart.max-request-size=20MB\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision 9a5035c287ae1549d7dd09231df3467b0feba6be)
++++ b/src/main/resources/application.properties	(date 1659791481150)
+@@ -1,13 +1,13 @@
+ server.port=8080
+ 
+-
+-#spring.datasource.url=jdbc:mysql://localhost:3306/restapi?user=root&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&useUnicode=yes&characterEncoding=UTF-8
+ spring.datasource.url=jdbc:mysql://localhost:3306/khar?useUnicode=yes&characterEncoding=UTF-8
+ spring.datasource.username=root
+ spring.datasource.password=neovision
+ spring.jpa.hibernate.ddl-auto=update
+-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+ spring.jpa.properties.hibernate.format_sql=true
++spring.jpa.database-platform=org.mariadb.jdbc.Driver
++spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
++#spring.liquibase.change-log=classpath:/db/master.xml
+ 
+ #baseUrl-callOmdb
+ omdb.base.url=http://www.omdbapi.com/
+Index: src/main/java/com/backbase/movies/controller/MovieController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.backbase.movies.controller;\r\n\r\nimport com.backbase.movies.service.MovieService;\r\nimport com.backbase.movies.service.dto.MovieDto;\r\nimport com.backbase.movies.service.dto.Response;\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.springframework.http.HttpStatus;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\nimport org.springframework.web.bind.annotation.RequestMapping;\r\nimport org.springframework.web.bind.annotation.RestController;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport java.util.List;\r\n\r\n@RestController @RequiredArgsConstructor\r\n@RequestMapping(\"/api/v1\")\r\npublic class MovieController {\r\n    private final MovieService movieService;\r\n\r\n    @GetMapping(value = \"/getMovies\")\r\n    public ResponseEntity<Response<List<MovieDto>>> getMovies(HttpServletRequest request) {\r\n        List<MovieDto> movies = movieService.getMovies();\r\n        return new ResponseEntity<>(new Response<List<MovieDto>>()\r\n                .build()\r\n                .setMessage(movies)\r\n                .setPath(request.getRequestURI()), HttpStatus.OK);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/backbase/movies/controller/MovieController.java b/src/main/java/com/backbase/movies/controller/MovieController.java
+--- a/src/main/java/com/backbase/movies/controller/MovieController.java	(revision 9a5035c287ae1549d7dd09231df3467b0feba6be)
++++ b/src/main/java/com/backbase/movies/controller/MovieController.java	(date 1659777730614)
+@@ -17,7 +17,7 @@
+ public class MovieController {
+     private final MovieService movieService;
+ 
+-    @GetMapping(value = "/getMovies")
++    @GetMapping(value = "/movies")
+     public ResponseEntity<Response<List<MovieDto>>> getMovies(HttpServletRequest request) {
+         List<MovieDto> movies = movieService.getMovies();
+         return new ResponseEntity<>(new Response<List<MovieDto>>()
+Index: src/main/resources/db/master.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/db/master.xml b/src/main/resources/db/master.xml
+new file mode 100644
+--- /dev/null	(date 1659790822784)
++++ b/src/main/resources/db/master.xml	(date 1659790822784)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<databaseChangeLog
++        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
++        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
++    <include file="db/changelog/20220221_create_user_table.xml"/>
++<!--    <include file="db/changelog/20220224_load_sample_data.xml"/>-->
++
++</databaseChangeLog>
++
+Index: src/main/resources/db/changelog/20220221_create_user_table.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/db/changelog/20220221_create_user_table.xml b/src/main/resources/db/changelog/20220221_create_user_table.xml
+new file mode 100644
+--- /dev/null	(date 1659791247733)
++++ b/src/main/resources/db/changelog/20220221_create_user_table.xml	(date 1659791247733)
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<databaseChangeLog
++        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
++        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
++                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
++        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
++    <changeSet id="1645468299921-1" author="arezoo (generated)">
++        <createTable tableName="user">
++            <column name="id" type="BIGINT" autoIncrement="true">
++                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_stock"/>
++            </column>
++            <column name="name" type="VARCHAR(255)">
++                <constraints nullable="false"/>
++            </column>
++            <column name="username" type="VARCHAR(255)">
++                <constraints nullable="false"/>
++            </column>
++            <column name="password" type="VARCHAR(255)">
++                <constraints nullable="false"/>
++            </column>
++            <column name="last_update" type="DATETIME"/>
++        </createTable>
++    </changeSet>
++
++</databaseChangeLog>
+\ No newline at end of file
+Index: src/main/java/com/backbase/movies/service/DataInitializer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.backbase.movies.service;\r\n\r\nimport com.backbase.movies.domain.Role;\r\nimport com.backbase.movies.domain.User;\r\nimport com.backbase.movies.repository.AcademyAwardsRepository;\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.springframework.boot.CommandLineRunner;\r\nimport org.springframework.stereotype.Component;\r\nimport org.springframework.mock.web.MockMultipartFile;\r\nimport org.springframework.web.multipart.MultipartFile;\r\nimport java.io.File;\r\nimport java.io.FileInputStream;\r\n\r\n@Component\r\n@RequiredArgsConstructor\r\npublic class DataInitializer implements CommandLineRunner {\r\n\r\n    private final AcademyAwardsRepository academyAwardsRepository;\r\n    private final AcademyAwardsService academyAwardsService;\r\n\r\n    @Override\r\n    public void run(String... args) throws Exception {\r\n        File file = new File(\"src/main/request/academy_awards.csv\");\r\n        MultipartFile multipartFile = new MockMultipartFile(\"academy_awards.csv\", new FileInputStream(String.valueOf(file)));\r\n        if (academyAwardsRepository.count() < 1) {\r\n            academyAwardsService.uploadCsvFile(multipartFile);\r\n        }\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/backbase/movies/service/DataInitializer.java b/src/main/java/com/backbase/movies/service/DataInitializer.java
+--- a/src/main/java/com/backbase/movies/service/DataInitializer.java	(revision 9a5035c287ae1549d7dd09231df3467b0feba6be)
++++ b/src/main/java/com/backbase/movies/service/DataInitializer.java	(date 1659785275267)
+@@ -20,7 +20,7 @@
+ 
+     @Override
+     public void run(String... args) throws Exception {
+-        File file = new File("src/main/request/academy_awards.csv");
++        File file = new File("src/main/resources/db/data/academy_awards.csv");
+         MultipartFile multipartFile = new MockMultipartFile("academy_awards.csv", new FileInputStream(String.valueOf(file)));
+         if (academyAwardsRepository.count() < 1) {
+             academyAwardsService.uploadCsvFile(multipartFile);
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>2.7.2</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n    <groupId>com.backbase</groupId>\r\n    <artifactId>movies</artifactId>\r\n    <version>0.0.1-SNAPSHOT</version>\r\n    <name>movies</name>\r\n    <description>movies API</description>\r\n\r\n    <properties>\r\n        <java.version>11</java.version>\r\n        <open-csv.version>5.6</open-csv.version>\r\n        <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-data-jpa</artifactId>\r\n        </dependency>\r\n<!--        <dependency>-->\r\n<!--            <groupId>org.springframework.boot</groupId>-->\r\n<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->\r\n<!--        </dependency>-->\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>mysql</groupId>\r\n            <artifactId>mysql-connector-java</artifactId>\r\n            <scope>runtime</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.projectlombok</groupId>\r\n            <artifactId>lombok</artifactId>\r\n            <optional>true</optional>\r\n        </dependency>\r\n        <!-- Spring security -->\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-security</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.security</groupId>\r\n            <artifactId>spring-security-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <!-- JWT -->\r\n        <dependency>\r\n            <groupId>com.auth0</groupId>\r\n            <artifactId>java-jwt</artifactId>\r\n            <version>4.0.0</version>\r\n        </dependency>\r\n        <!-- Csv -->\r\n        <dependency>\r\n            <groupId>com.opencsv</groupId>\r\n            <artifactId>opencsv</artifactId>\r\n            <version>${open-csv.version}</version>\r\n        </dependency>\r\n        <!-- Swagger -->\r\n        <dependency>\r\n            <groupId>io.springfox</groupId>\r\n            <artifactId>springfox-boot-starter</artifactId>\r\n            <version>3.0.0</version>\r\n        </dependency>\r\n        <!--  Mapstruct  -->\r\n        <dependency>\r\n            <groupId>org.mapstruct</groupId>\r\n            <artifactId>mapstruct</artifactId>\r\n            <version>${org.mapstruct.version}</version>\r\n        </dependency>\r\n        <!-- Test   -->\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <!--  H2 database  -->\r\n        <dependency>\r\n            <groupId>com.h2database</groupId>\r\n            <artifactId>h2</artifactId>\r\n            <scope>runtime</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework</groupId>\r\n            <artifactId>spring-test</artifactId>\r\n        </dependency>\r\n\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n                <configuration>\r\n                    <excludes>\r\n                        <exclude>\r\n                            <groupId>org.projectlombok</groupId>\r\n                            <artifactId>lombok</artifactId>\r\n                        </exclude>\r\n                    </excludes>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.8.1</version>\r\n                <configuration>\r\n                    <source>9</source>\r\n                    <target>9</target>\r\n                    <annotationProcessorPaths>\r\n                        <path>\r\n                            <groupId>org.projectlombok</groupId>\r\n                            <artifactId>lombok</artifactId>\r\n                            <version>${lombok.version}</version>\r\n                        </path>\r\n                        <!-- This is needed when using Lombok 1.18.16 and above -->\r\n                        <path>\r\n                            <groupId>org.projectlombok</groupId>\r\n                            <artifactId>lombok-mapstruct-binding</artifactId>\r\n                            <version>0.2.0</version>\r\n                        </path>\r\n                        <!-- Mapstruct should follow the lombok path(s) -->\r\n                        <path>\r\n                            <groupId>org.mapstruct</groupId>\r\n                            <artifactId>mapstruct-processor</artifactId>\r\n                            <version>${org.mapstruct.version}</version>\r\n                        </path>\r\n                    </annotationProcessorPaths>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 9a5035c287ae1549d7dd09231df3467b0feba6be)
++++ b/pom.xml	(date 1659790068572)
+@@ -5,8 +5,7 @@
+     <parent>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-parent</artifactId>
+-        <version>2.7.2</version>
+-        <relativePath/> <!-- lookup parent from repository -->
++        <version>2.6.3</version>
+     </parent>
+     <groupId>com.backbase</groupId>
+     <artifactId>movies</artifactId>
+@@ -25,26 +24,10 @@
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-data-jpa</artifactId>
+         </dependency>
+-<!--        <dependency>-->
+-<!--            <groupId>org.springframework.boot</groupId>-->
+-<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+-<!--        </dependency>-->
+-
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-web</artifactId>
+         </dependency>
+-
+-        <dependency>
+-            <groupId>mysql</groupId>
+-            <artifactId>mysql-connector-java</artifactId>
+-            <scope>runtime</scope>
+-        </dependency>
+-        <dependency>
+-            <groupId>org.projectlombok</groupId>
+-            <artifactId>lombok</artifactId>
+-            <optional>true</optional>
+-        </dependency>
+         <!-- Spring security -->
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+@@ -55,6 +38,17 @@
+             <artifactId>spring-security-test</artifactId>
+             <scope>test</scope>
+         </dependency>
++
++        <dependency>
++            <groupId>mysql</groupId>
++            <artifactId>mysql-connector-java</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.projectlombok</groupId>
++            <artifactId>lombok</artifactId>
++            <optional>true</optional>
++        </dependency>
++
+         <!-- JWT -->
+         <dependency>
+             <groupId>com.auth0</groupId>
+@@ -73,19 +67,19 @@
+             <artifactId>springfox-boot-starter</artifactId>
+             <version>3.0.0</version>
+         </dependency>
+-        <!--  Mapstruct  -->
++        <!-- Mapstruct -->
+         <dependency>
+             <groupId>org.mapstruct</groupId>
+             <artifactId>mapstruct</artifactId>
+             <version>${org.mapstruct.version}</version>
+         </dependency>
+-        <!-- Test   -->
++        <!-- Test -->
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-test</artifactId>
+             <scope>test</scope>
+         </dependency>
+-        <!--  H2 database  -->
++        <!-- H2 database -->
+         <dependency>
+             <groupId>com.h2database</groupId>
+             <artifactId>h2</artifactId>
+@@ -95,14 +89,27 @@
+             <groupId>org.springframework</groupId>
+             <artifactId>spring-test</artifactId>
+         </dependency>
+-
++        <!-- liquibase -->
++        <dependency>
++            <groupId>org.liquibase</groupId>
++            <artifactId>liquibase-core</artifactId>
++        </dependency>
+     </dependencies>
+ 
+     <build>
+         <plugins>
++<!--            <plugin>-->
++<!--                <groupId>org.liquibase</groupId>-->
++<!--                <artifactId>liquibase-maven-plugin</artifactId>-->
++<!--                <version>3.4.1</version>-->
++<!--                <configuration>-->
++<!--                    <propertyFile>src/main/resources/liquibase.properties</propertyFile>-->
++<!--                </configuration>-->
++<!--            </plugin>-->
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
++                <version>2.6.3</version>
+                 <configuration>
+                     <excludes>
+                         <exclude>
+diff --git a/src/main/request/academy_awards.csv b/src/main/resources/db/data/academy_awards.csv
+rename from src/main/request/academy_awards.csv
+rename to src/main/resources/db/data/academy_awards.csv

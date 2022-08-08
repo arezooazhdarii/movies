@@ -1,0 +1,30 @@
+version: '3.1'
+services:
+  app:
+    build: .
+    container_name: app-movies
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-movies:3306/movies
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_DATASOURCE_PLATFORM=org.hibernate.dialect.MySQL8Dialect
+    networks:
+      - movies
+  db:
+    image: 'mysql:8'
+    container_name: db-movies
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=movies
+    networks:
+      - movies
+networks:
+  movies:
+    driver: bridge
