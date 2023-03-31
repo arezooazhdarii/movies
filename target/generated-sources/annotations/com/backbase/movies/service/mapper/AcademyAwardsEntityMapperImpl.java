@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-08-09T01:48:07+0400",
-    comments = "version: 1.5.2.Final, compiler: javac, environment: Java 11.0.15.1 (Oracle Corporation)"
+    date = "2023-03-31T15:07:56+0400",
+    comments = "version: 1.5.2.Final, compiler: javac, environment: Java 19.0.2 (Homebrew)"
 )
 @Component
 public class AcademyAwardsEntityMapperImpl implements AcademyAwardsEntityMapper {

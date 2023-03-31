@@ -1,0 +1,7 @@
+com/backbase/movies/service/impl/RatingServiceImplTest.class
+com/backbase/movies/ApplicationTests.class
+com/backbase/movies/controller/UserControllerTest.class
+com/backbase/movies/service/impl/UserServiceImplTest.class
+com/backbase/movies/TestUtils.class
+com/backbase/movies/service/AcademyAwardsServiceTest.class
+com/backbase/movies/service/impl/MovieServiceImplTest.class

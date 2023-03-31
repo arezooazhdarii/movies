@@ -4,7 +4,93 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e3350bb-096f-48a5-8b31-c20fa565cdd5" name="Changes" comment="final check" />
+    <list default="true" id="8e3350bb-096f-48a5-8b31-c20fa565cdd5" name="Changes" comment="final check">
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/backbase/movies/service/AcademyAwardsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/backbase/movies/service/AcademyAwardsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/backbase/movies/service/impl/MovieServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/backbase/movies/service/impl/MovieServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/config/SpringFoxConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/config/SpringFoxConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/controller/MovieController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/controller/RatingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/controller/RatingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/AcademyAwards$AcademyAwardsBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/AcademyAwards$AcademyAwardsBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/AcademyAwards.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/AcademyAwards.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Movie$MovieBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Movie$MovieBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Rating$RatingBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Rating$RatingBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Rating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Rating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/BadRequestException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/BadRequestException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/BaseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/BaseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/CsvException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/CsvException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/CsvFileException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/CsvFileException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/ForbiddenException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/ForbiddenException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/NotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/NotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/ServiceUnavailableErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/ServiceUnavailableErrorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/UnauthorizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/UnauthorizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/UserAlreadyExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/UserAlreadyExistException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/handler/CustomGlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/handler/CustomGlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/handler/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/exception/handler/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/AcademyAwardsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/AcademyAwardsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/CustomOmdbRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/CustomOmdbRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/MovieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/MovieRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/RatingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/RatingRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/CustomAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/CustomAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/JWTConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/JWTConfigurer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/JWTFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/JWTFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/AcademyAwardsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/AcademyAwardsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/DataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/MovieService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/RatingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/RatingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/AcademyAwardsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/AcademyAwardsDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/ErrorDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/ErrorDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/MovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/MovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RateDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RateDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RatingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RatingDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/Response$ResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/Response$ResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RoleDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RoleDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RoleToUserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/RoleToUserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/TokenDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/TokenDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/response/MovieInformationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/response/MovieInformationDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/response/RatingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/dto/response/RatingDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/MovieApiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/MovieApiService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/MovieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/MovieServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/RatingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/RatingServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/RoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/AcademyAwardsEntityMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/AcademyAwardsEntityMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/AcademyAwardsEntityMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/AcademyAwardsEntityMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/CsvMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/CsvMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/MovieMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/MovieMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/MovieMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/MovieMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/RoleMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/RoleMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/UserMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/backbase/movies/service/mapper/UserMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/AcademyAwardsEntityMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/AcademyAwardsEntityMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/MovieMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/MovieMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/RoleMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/RoleMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/backbase/movies/service/mapper/UserMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/ApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/TestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/TestUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/controller/UserControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/AcademyAwardsServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/AcademyAwardsServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/impl/MovieServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/impl/MovieServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/impl/RatingServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/impl/RatingServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/impl/UserServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/backbase/movies/service/impl/UserServiceImplTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,20 +123,10 @@
     </file-type-list>
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2COTzETfonakzE7wMAFbkCw4VJi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,24 +135,17 @@
     <option name="foldersAlwaysOnTop" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../projects/moodys" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/arezooazhdari/Documents/arezoo/project/movies&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;55ba44c548d3ebafd9f70e64a7f232b0&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.backbase.movies.service.dto" />
@@ -116,17 +185,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="AcademyAwardsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in movies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movies" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.backbase.movies.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.backbase.movies.service" />
-      <option name="MAIN_CLASS_NAME" value="com.backbase.movies.service.AcademyAwardsServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,7 +208,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RatingServiceImplTest.ratingMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovieServiceImplTest.getMovie_shouldSave_thenStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movies" />
       <extension name="coverage">
         <pattern>
@@ -155,24 +217,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.backbase.movies.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.backbase.movies.service.impl.RatingServiceImplTest" />
-      <option name="METHOD_NAME" value="ratingMovie" />
+      <option name="MAIN_CLASS_NAME" value="com.backbase.movies.service.impl.MovieServiceImplTest" />
+      <option name="METHOD_NAME" value="getMovie_shouldSave_thenStatus200" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="movies" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.backbase.movies.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.backbase.movies.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.backbase.movies.controller.UserControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,28 +252,35 @@
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="movies" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.backbase.movies.Application" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.backbase.movies.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JUnit.RatingServiceImplTest.ratingMovie" />
-      <item itemvalue="JUnit.UserControllerTest" />
-      <item itemvalue="JUnit.AcademyAwardsServiceTest" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.All in movies" />
+      <item itemvalue="JUnit.MovieServiceImplTest.getMovie_shouldSave_thenStatus200" />
       <item itemvalue="JUnit.UserServiceImplTest" />
       <item itemvalue="JUnit.MovieServiceImplTest" />
       <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in movies" />
+        <item itemvalue="JUnit.MovieServiceImplTest.getMovie_shouldSave_thenStatus200" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="JUnit.MovieServiceImplTest" />
         <item itemvalue="JUnit.UserServiceImplTest" />
-        <item itemvalue="JUnit.RatingServiceImplTest.ratingMovie" />
-        <item itemvalue="JUnit.AcademyAwardsServiceTest" />
-        <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -270,6 +324,15 @@
       <workItem from="1659941993164" duration="18291000" />
       <workItem from="1659961932286" duration="26797000" />
       <workItem from="1659993350697" duration="1216000" />
+      <workItem from="1670776768857" duration="12993000" />
+      <workItem from="1670858222714" duration="6415000" />
+      <workItem from="1671124447868" duration="8000" />
+      <workItem from="1671185586123" duration="602000" />
+      <workItem from="1671433171651" duration="295000" />
+      <workItem from="1674129557323" duration="763000" />
+      <workItem from="1674199169819" duration="597000" />
+      <workItem from="1677931943035" duration="633000" />
+      <workItem from="1680088901890" duration="5461000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1658673756867</created>
@@ -431,7 +494,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
@@ -534,6 +596,31 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/backbase/movies/service/impl/MovieServiceImpl.java</url>
           <line>25</line>
           <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/backbase/movies/service/impl/MovieServiceImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/backbase/movies/service/impl/MovieServiceImplTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/backbase/movies/service/impl/MovieServiceImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/backbase/movies/service/impl/MovieServiceImplTest.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/backbase/movies/service/impl/MovieServiceImplTest.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="188" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.StackOverflowError" package="java.lang" />

@@ -1,0 +1,49 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+2023-03-31 17:50:35.373  INFO 45514 --- [           main] com.backbase.movies.Application          : Starting Application v0.0.1-SNAPSHOT using Java 18.0.2.1 on Arezoos-MacBook-Pro.local with PID 45514 (/Users/arezooazhdari/Documents/arezoo/project/movies/target/movies-0.0.1-SNAPSHOT.jar started by arezooazhdari in /Users/arezooazhdari/Documents/arezoo/project/movies/target)
+2023-03-31 17:50:35.381  INFO 45514 --- [           main] com.backbase.movies.Application          : No active profile set, falling back to 1 default profile: "default"
+2023-03-31 17:50:38.528  INFO 45514 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-31 17:50:38.758  INFO 45514 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216 ms. Found 5 JPA repository interfaces.
+2023-03-31 17:50:40.818  INFO 45514 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-31 17:50:40.837  INFO 45514 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-31 17:50:40.837  INFO 45514 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-03-31 17:50:40.985  INFO 45514 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-31 17:50:40.986  INFO 45514 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5448 ms
+2023-03-31 17:50:41.738  INFO 45514 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-31 17:50:41.842  INFO 45514 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-03-31 17:50:42.123  INFO 45514 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-31 17:50:42.292  INFO 45514 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-31 17:50:42.932  INFO 45514 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-31 17:50:42.956  INFO 45514 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-31 17:50:44.446  INFO 45514 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-31 17:50:44.459  INFO 45514 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31 17:50:45.390  WARN 45514 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in URL [jar:file:/Users/arezooazhdari/Documents/arezoo/project/movies/target/movies-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/backbase/movies/security/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-03-31 17:50:45.390  INFO 45514 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31 17:50:45.392  INFO 45514 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31 17:50:45.435  INFO 45514 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-31 17:50:45.440  INFO 45514 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-31 17:50:45.464  INFO 45514 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-31 17:50:45.533 ERROR 45514 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.backbase.movies.security.SecurityConfig required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
