@@ -22,11 +22,6 @@ public class Application {
 	}
 
 	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
-
-	@Bean
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
