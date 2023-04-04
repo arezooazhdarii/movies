@@ -22,7 +22,7 @@ public class Application {
 	}
 
 	@Bean
-	PasswordEncoder passwordEncoder() {
+	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
@@ -30,8 +30,6 @@ public class Application {
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
-
-
 
 	@Bean
 	CommandLineRunner run(UserService userService, RoleService roleService) {
