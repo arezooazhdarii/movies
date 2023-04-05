@@ -2,42 +2,81 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Executed'
-            }
-        }
-        stage('clean') {
+        stage('Clean') {
             steps {
                 sh 'mvn clean'
             }
         }
-        stage('compite') {
-            steps {
-                sh 'mvn compile'
-            }
-        }
-        stage('test') {
+        stage('Test') {
             steps {
                 sh 'mvn test'
             }
         }
-        stage('package') {
+        stage('Compile') {
+            steps {
+                sh 'mvn compile'
+            }pipeline {
+                 agent any
+
+                 stages {
+                     stage('Checkout') {
+                         steps {
+                             git branch: 'develop', url: 'https://github.com/arezooazhdarii/movies.git'
+                         }
+                     }
+                     stage('Clean') {
+                         steps {
+                             sh 'mvn clean'
+                         }
+                     }
+                     stage('Test') {
+                         steps {
+                             sh 'mvn test'
+                         }
+                     }
+                     stage('Compile') {
+                         steps {
+                             sh 'mvn compile'
+                         }
+                     }
+                     stage('Package') {
+                         steps {
+                             sh 'mvn package'
+                         }
+                          post {
+                             success {
+                                 archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
+                             }
+                         }
+
+                     }
+                     stage('Run') {
+                         steps {
+                             withEnv(['JENKINS_NODE_COOKIE=dontKillMe']){
+                             sh 'nohup java -jar target/movies-0.0.1-SNAPSHOT.jar &'
+                         }}
+                     }
+                 }
+             }
+
+        }
+        stage('Package') {
             steps {
                 sh 'mvn package'
             }
-            post{
+             post {
                 success {
                     archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
                 }
             }
-        }
 
-        stage('deploy') {
+        }
+        stage('Run') {
             steps {
-                sh 'java -jar target/movies-0.0.1-SNAPSHOT.jar'
-            }
+                withEnv(['JENKINS_NODE_COOKIE=dontKillMe']){
+                sh 'nohup java -jar target/movies-0.0.1-SNAPSHOT.jar &'
+            }}
         }
-
     }
 }
+:wq!
